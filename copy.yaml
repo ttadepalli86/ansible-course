@@ -1,0 +1,13 @@
+---
+- name: This sets up an httpd webserver
+  hosts: all
+  become: yes
+  tasks:
+  - name: copy something into my servers
+    copy:
+      src: files/somefile
+      dest: /home/centos
+      owner: centos
+      group: centos
+      mode: 0644
+   
